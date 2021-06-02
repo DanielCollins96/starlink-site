@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 const Header = () => {
 
@@ -7,11 +8,14 @@ const Header = () => {
             <div>    
                 <div></div>
                 <div>
-                    <Image
+                    <img
                         src="/images/logo_x_black.png"
-                        width={126}
-                        height={126}
+                        width="126px"
+                        // height="auto"
                     />
+                </div>
+                <div>
+                    <GiHamburgerMenu />
                 </div>
             </div>
         </div>
