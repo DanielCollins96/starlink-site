@@ -4,7 +4,7 @@ import Hero from '../components/hero'
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-screen bg-black">
+    <div className="flex flex-col h-screen bg-gray-500">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
