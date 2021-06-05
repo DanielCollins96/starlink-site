@@ -9,8 +9,12 @@ module.exports = {
       888: '#888'
     },
     inset: {
-      45: '45%'
-    }
+      45: '45%',
+    },
+    fontFamily: {
+      sans: ['Lobster', 'sans-serif'],
+      serif: ['Lobster', 'serif'],
+    },
   },
   },
   variants: {
