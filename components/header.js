@@ -11,13 +11,14 @@ const Header = () => {
                     <div></div>
                     <div className="place-self-center">
                         <Image 
+                            className='object-cover'
                             src="/images/logo_x_white.png"
                             alt="Starlink Logo"
                             width={81}
                             height={28}
                         />
                     </div>
-                    <div className="mr-6 justify-self-end self-center">
+                    <div className="mr-8 justify-self-end self-center sm:mr-20">
                         <img src="/images/hamburger_white.png" className="h-4"></img>
                     </div>
                 </div>
