@@ -17,8 +17,8 @@ export default function Home() {
       >
         <div className="absolute grid max-w-4xl w-11/12 text-white text-center left-1/2	top-1/2 transform -translate-y-2/4 -translate-x-2/4">
           <h2 className="mb-8 text-4xl font-medium lg:mt-12 lg:mb-32 md:text-5xl">Order Starlink</h2>
-          <p className="text-xs font-light">Starlink is available to a limited number of users per coverage area at this time. Orders will be fulfilled on a first-come, first-served basis.</p>
-          <form action="" className="max-w-2xl m-auto w-5/6">
+          <p className="text-xs font-light mb-8 px-12 md:text-sm">Starlink is available to a limited number of users per coverage area at this time. Orders will be fulfilled on a first-come, first-served basis.</p>
+          <form action="" className="max-w-2xl m-auto w-11/12">
             <div className="relative">
               <label htmlFor="service-input" className="absolute pl-4 pt-4 text-gray-500 text-xs">Service Address</label>
               <input type="text" id="service-input" className="w-full pt-8 pb-2 pl-4 my-2 bg-black bg-opacity-70 outline-none border border-transparent focus:border-white transition duration-300"/>
