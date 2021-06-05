@@ -12,8 +12,8 @@ module.exports = {
       45: '45%',
     },
     fontFamily: {
-      sans: ['Lobster', 'sans-serif'],
-      serif: ['Lobster', 'serif'],
+      sans: ['Barlow', 'sans-serif'],
+      serif: ['Barlow', 'serif'],
     },
   },
   },

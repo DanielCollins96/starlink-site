@@ -16,7 +16,7 @@ export default function Home() {
         fixed={true}
       >
         <div className="absolute grid max-w-4xl w-11/12 text-white text-center left-1/2	top-45 transform -translate-y-2/4 -translate-x-2/4">
-          <h2 className="mb-8 text-4xl font-medium lg:mt-12 lg:mb-32 md:text-5xl">Order Starlink</h2>
+          <h2 className="mb-8 text-2xl font-medium lg:mt-12 lg:mb-32 md:text-5xl">Order Starlink</h2>
           <p className="text-xs font-light mb-8 px-12 md:text-sm">Starlink is available to a limited number of users per coverage area at this time. Orders will be fulfilled on a first-come, first-served basis.</p>
           <form action="" className="max-w-2xl m-auto w-11/12">
             <div className="relative">
@@ -37,7 +37,7 @@ export default function Home() {
       >
         <div className="grid text-white w-10/12 m-auto">
           <div className="justify-self-center max-w-prose md:max-w-xl xl:justify-self-end xl:max-w-md 2xl:max-w-prose">
-            <h2 className="text-3xl font-medium leading-normal mt-0 mb-8 sm:text-4xl md:text-5xl">
+            <h2 className="text-2xl font-medium leading-normal mt-0 mb-8 sm:text-4xl md:text-5xl">
               High-speed, low latency broadband internet.
             </h2>
             <p className="font-light leading-5 my-4">Starlink is now delivering initial beta service both domestically and internationally, and will continue expansion to near global coverage of the populated world in 2021.</p>
