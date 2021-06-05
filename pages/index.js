@@ -20,15 +20,15 @@ export default function Home() {
           <p className="text-xs font-light mb-8 px-12 md:text-sm">Starlink is available to a limited number of users per coverage area at this time. Orders will be fulfilled on a first-come, first-served basis.</p>
           <form action="" className="max-w-2xl m-auto w-11/12">
             <div className="relative">
-              <label htmlFor="service-input" className="absolute pl-4 pt-4 text-gray-500 text-xs">Service Address</label>
-              <input type="text" id="service-input" className="w-full pt-8 pb-2 pl-4 my-2 bg-black bg-opacity-70 outline-none border border-transparent focus:border-white transition duration-300"/>
+              <label htmlFor="service-input" className="absolute pl-4 pt-4 text-mainLabel text-xs">Service Address</label>
+              <input type="text" id="service-input" className="w-full pt-8 pb-2 pl-4 my-2 bg-mainInputBg bg-opacity-70 outline-none border border-transparent focus:border-white transition duration-300"/>
             </div>
-            <div className="text-xs font-light text-gray-400 mt-1.5 mb-10">Can't find your address? Try a <Link href=""><a className="underline">Plus Code</a></Link> with City.</div>
+            <div className="text-xs font-light text-888 mt-1.5 mb-10">Can't find your address? Try a <Link href=""><a className="underline">Plus Code</a></Link> with City.</div>
             <button className="w-full bg-black bg-opacity-50 text-gray-600 border-2  border-gray-600 h-14 md:w-64" type="submit">Order Now</button>
           </form>
         </div>
           <div className="absolute w-full text-center bottom-7">
-            <p><span className="text-xs font-light text-gray-400">By clicking ORDER NOW, you agree to our <Link href="https://www.starlink.com/legal/privacy-policy"><a className="text-white">Privacy Policy</a></Link>.</span></p>
+            <p><span className="text-xs font-light text-888">By clicking ORDER NOW, you agree to our <Link href="https://www.starlink.com/legal/privacy-policy"><a className="text-white">Privacy Policy</a></Link>.</span></p>
           </div>
       </ImageHero>
       <ImageHero 
