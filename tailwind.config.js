@@ -7,6 +7,9 @@ module.exports = {
       mainInputBg: '#151515',
       mainLabel: '#b8b8b8',
       888: '#888'
+    },
+    inset: {
+      45: '45%'
     }
   },
   },

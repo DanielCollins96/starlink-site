@@ -15,7 +15,7 @@ export default function Home() {
         imageFilename='1-starlinkcharcoal.jpg'
         fixed={true}
       >
-        <div className="absolute grid max-w-4xl w-11/12 text-white text-center left-1/2	top-1/2 transform -translate-y-2/4 -translate-x-2/4">
+        <div className="absolute grid max-w-4xl w-11/12 text-white text-center left-1/2	top-45 transform -translate-y-2/4 -translate-x-2/4">
           <h2 className="mb-8 text-4xl font-medium lg:mt-12 lg:mb-32 md:text-5xl">Order Starlink</h2>
           <p className="text-xs font-light mb-8 px-12 md:text-sm">Starlink is available to a limited number of users per coverage area at this time. Orders will be fulfilled on a first-come, first-served basis.</p>
           <form action="" className="max-w-2xl m-auto w-11/12">
