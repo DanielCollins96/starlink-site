@@ -1,9 +1,6 @@
 import Image from 'next/image'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { FaUserCircle } from 'react-icons/fa'
-import { GrLanguage } from 'react-icons/gr'
 
-const Header = () => {
+const Header = ({toggleDrawer}) => {
 
     return (
         <div className="absolute  w-full flex flex-row pt-8 max-h-full place-content-stretch items-stretch">
@@ -19,7 +16,7 @@ const Header = () => {
                         />
                     </div>
                     <div className="mr-8 justify-self-end self-center sm:mr-20">
-                        <img src="/images/hamburger_white.png" className="h-4"></img>
+                        <img src="/images/hamburger_white.png" className="h-4" onClick={() => toggleDrawer()}></img>
                     </div>
                 </div>
         </div>

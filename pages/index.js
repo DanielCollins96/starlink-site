@@ -1,10 +1,18 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from "framer-motion";
-import Header from '../components/header'
+import MenuDrawer from '../components/MenuDrawer'
+import Header from '../components/Header'
 import ImageHero from '../components/ImageHero'
 
 export default function Home() {
+
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleDrawer = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
     <div className="flex flex-col bg-gray-500">
@@ -12,7 +20,8 @@ export default function Home() {
         <title>Starlink</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      {isOpen ? <MenuDrawer toggleDrawer={toggleDrawer} /> : null}
+      <Header toggleDrawer={toggleDrawer}/>
       <ImageHero 
         imageFilename='1-starlinkcharcoal.jpg'
         fixed={true}
@@ -57,7 +66,6 @@ export default function Home() {
       <ImageHero
         imageFilename='6-Starlink_Nightsky-cropped.jpg'
       >
-
       </ImageHero>
       <div className="inline-block h-12 bg-red-400">
         hey
