@@ -1,11 +1,21 @@
+import { useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { MdClose } from "react-icons/md";
 
-const MenuDrawer = ({toggleDrawer}) => {
+const MenuDrawer = ({toggleDrawer, isOpen}) => {
 
+    const closeDrawer = useCallback((event) => {
+        toggleDrawer()
+    })
+    useEffect(() => {
+        window.addEventListener('scroll', closeDrawer)
+        return () => {
+            window.removeEventListener('scroll', closeDrawer)
+        }
+    }, [])
     return (
-        <div className="z-10 absolute bg-black text-white inset-0 p-8">
+        <div className={`z-10 absolute bg-black text-white inset-0 p-8 transform transition duration-200 ${isOpen ? '' : ''}`}>
             <div className="flex flex-col">
                 <div className="grid pb-6 grid-cols-3">
                     <div></div>
