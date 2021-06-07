@@ -17,6 +17,7 @@ const MenuDrawer = ({toggleDrawer, isOpen}) => {
     const closeDrawer = useCallback((event) => {
         toggleDrawer()
     })
+    
     useEffect(() => {
         window.addEventListener('scroll', closeDrawer)
         return () => {
@@ -25,7 +26,7 @@ const MenuDrawer = ({toggleDrawer, isOpen}) => {
     }, [])
     return (
         <Backdrop closeDrawer={closeDrawer} isOpen={isOpen}>
-            <div className={`transform z-20 absolute bg-black text-white w-full sm:w-64 right-0 bottom-0 top-0 p-8 transition ease-linear duration-300 ${isOpen ? '' : ''}`}>
+            <div className={`transform z-20 fixed bg-black text-white w-full sm:w-64 top-0 right-0 h-full p-8  ease-in-out transition-all duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <div className="flex flex-col">
                     <div className="grid pb-6 grid-cols-3 sm:grid-cols-2">
                         <div></div>
