@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from "framer-motion";
 import MenuDrawer from '../components/MenuDrawer'
+import Backdrop from '../components/Backdrop'
 import Header from '../components/Header'
 import ImageHero from '../components/ImageHero'
 
@@ -14,13 +15,21 @@ export default function Home() {
     setIsOpen(!isOpen)
   }
 
+  const closeDrawer = useCallback((event) => {
+    if(isOpen){
+      toggleDrawer()
+    }
+  })
+
   return (
     <div className="flex flex-col bg-gray-500">
       <Head>
         <title>Starlink</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <MenuDrawer toggleDrawer={toggleDrawer} isOpen={isOpen}/>
+      <Backdrop closeDrawer={closeDrawer} isOpen={isOpen}>
+        <MenuDrawer toggleDrawer={toggleDrawer} isOpen={isOpen}/>
+      </Backdrop>
       <Header toggleDrawer={toggleDrawer}/>
       <ImageHero 
         imageFilename='1-starlinkcharcoal.jpg'
@@ -66,6 +75,11 @@ export default function Home() {
       <ImageHero
         imageFilename='6-Starlink_Nightsky-cropped.jpg'
       >
+        <div className=" relative grid text-white text-center w-10/12 m-auto">
+          <h2 className="text-2xl md:text-5xl">Preserving the night sky</h2>
+          <div className={`absolute p-8 bg-red-500 m-auto w-1/2 transform transition-all duration-500 ${isOpen ? '-left-2/3' : 'left-0'}`}></div>
+          <button className="" onClick={toggleDrawer}>Open</button>
+        </div>
       </ImageHero>
       <div className="inline-block h-12 bg-red-400">
         hey

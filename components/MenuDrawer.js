@@ -4,29 +4,10 @@ import Image from 'next/image'
 import { MdClose } from "react-icons/md";
 
 
-const Backdrop = ({closeDrawer , isOpen, children}) => {
-    return (
-        <div className={`absolute inset-0 z-10 bg-black bg-opacity-60 ${isOpen ? '' : 'hidden'}`} onClick={closeDrawer}>
-            {children}
-        </div>
-    )
-}
-
 const MenuDrawer = ({toggleDrawer, isOpen}) => {
 
-    const closeDrawer = useCallback((event) => {
-        toggleDrawer()
-    })
-    
-    useEffect(() => {
-        window.addEventListener('scroll', closeDrawer)
-        return () => {
-            window.removeEventListener('scroll', closeDrawer)
-        }
-    }, [])
     return (
-        <Backdrop closeDrawer={closeDrawer} isOpen={isOpen}>
-            <div className={`transform z-20 fixed bg-black text-white w-full sm:w-64 top-0 right-0 h-full p-8  ease-in-out transition-all duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className={`z-20 fixed bg-black text-white w-full sm:w-64 top-0 h-full p-8  ease-in-out transform transition-all duration-500 ${isOpen ? '-right-0' : '-right-full'}`}>
                 <div className="flex flex-col">
                     <div className="grid pb-6 grid-cols-3 sm:grid-cols-2">
                         <div></div>
@@ -59,7 +40,6 @@ const MenuDrawer = ({toggleDrawer, isOpen}) => {
                     </div>
                 </div>
             </div>
-        </Backdrop>
     )
 }
 
