@@ -20,7 +20,7 @@ export default function Home() {
         <title>Starlink</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {isOpen ? <MenuDrawer toggleDrawer={toggleDrawer} isOpen={isOpen}/> : null}
+      <MenuDrawer toggleDrawer={toggleDrawer} isOpen={isOpen}/>
       <Header toggleDrawer={toggleDrawer}/>
       <ImageHero 
         imageFilename='1-starlinkcharcoal.jpg'
