@@ -11,15 +11,21 @@ export default function Home() {
 
   const [isOpen, setIsOpen] = useState(false)
 
-  const toggleDrawer = () => {
-    setIsOpen(!isOpen)
-  }
-
+  useEffect(() => {
+    console.log('scrolling')
+    window.addEventListener('scroll', closeDrawer)
+    return () => window.addEventListener('scroll', closeDrawer)
+  }, [isOpen])
+  
   const closeDrawer = useCallback((event) => {
     if(isOpen){
       toggleDrawer()
     }
   })
+  
+  const toggleDrawer = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
     <div className="flex flex-col bg-gray-500">
@@ -27,9 +33,8 @@ export default function Home() {
         <title>Starlink</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Backdrop closeDrawer={closeDrawer} isOpen={isOpen}>
-        <MenuDrawer toggleDrawer={toggleDrawer} isOpen={isOpen}/>
-      </Backdrop>
+      <Backdrop closeDrawer={closeDrawer} isOpen={isOpen} />
+      <MenuDrawer toggleDrawer={toggleDrawer} isOpen={isOpen}/>
       <Header toggleDrawer={toggleDrawer}/>
       <ImageHero 
         imageFilename='1-starlinkcharcoal.jpg'
