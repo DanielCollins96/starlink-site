@@ -7,7 +7,7 @@ import { MdClose } from "react-icons/md";
 const MenuDrawer = ({toggleDrawer, isOpen}) => {
 
     return (
-            <div className={`z-20 fixed bg-black text-white w-full sm:w-64 top-0 h-full p-8  ease-in-out transform transition-all duration-500 ${isOpen ? '-right-0' : '-right-full'}`}>
+            <div className={`z-20 fixed bg-black text-white w-full sm:w-64 top-0 h-full p-8  ease-in-out transform transition-all duration-300 ${isOpen ? '-right-0' : '-right-full'}`}>
                 <div className="flex flex-col">
                     <div className="grid pb-6 grid-cols-3 sm:grid-cols-2">
                         <div></div>
