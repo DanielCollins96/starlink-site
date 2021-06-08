@@ -12,7 +12,6 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
-    console.log('scrolling')
     window.addEventListener('scroll', closeDrawer)
     return () => window.addEventListener('scroll', closeDrawer)
   }, [isOpen])
@@ -80,10 +79,31 @@ export default function Home() {
       <ImageHero
         imageFilename='6-Starlink_Nightsky-cropped.jpg'
       >
-        <div className=" relative grid text-white text-center w-10/12 m-auto">
-          <h2 className="text-2xl md:text-5xl">Preserving the night sky</h2>
-          <div className={`absolute p-8 bg-red-500 m-auto w-1/2 transform transition-all duration-500 ${isOpen ? '-left-2/3' : 'left-0'}`}></div>
-          <button className="" onClick={toggleDrawer}>Open</button>
+        <div className="relative grid text-white w-10/12 m-auto my-8">
+          <h2 className="text-2xl text-center md:text-5xl">Preserving the night sky</h2>
+          <div className="">
+          <form method="POST" action="https://formspree.io/f/mdopppyn" className="bg-white text-black rounded max-w-md w-2/3 m-auto bg-opacity-30 p-4">
+            <div className="">
+              <label htmlFor="name">
+                <span className="text-lg text-white">Name (Required)</span>
+                <input required className="form-input mt-1 block w-full rounded-md" type="text" name="name" id="name" />
+              </label>
+            </div>
+            <div className="block">
+              <label htmlFor="email">
+                <span className="text-lg text-white">E-Mail</span>
+                <input className="form-input mt-1 block w-full rounded-md" type="email" name="email" id="email" />
+              </label>
+            </div>
+            <div className="">
+              <label htmlFor="message">
+              <span className="text-lg text-white">Leave a Message (Required)</span>
+              <textarea required placeholder="Enter a Message..." rows="3" class="form-textarea mt-1 block w-full rounded-md max-h-36" name="message" id="message"></textarea>
+              </label>
+            </div>
+            <button type="submit" onSubmit={(e) => alert(e)} className="w-full mt-2 uppercase font-medium text-white border-white border-2 py-2.5">Learn More</button>
+          </form>
+          </div>
         </div>
       </ImageHero>
       <div className="inline-block h-12 bg-red-400">
