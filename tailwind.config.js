@@ -15,6 +15,9 @@ module.exports = {
       sans: ['Barlow', 'sans-serif'],
       serif: ['Barlow', 'serif'],
     },
+    minHeight: {
+      full: '500px',
+    }
   },
   },
   variants: {

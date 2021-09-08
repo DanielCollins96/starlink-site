@@ -3,7 +3,7 @@ import Image from 'next/image'
 const Header = ({toggleDrawer}) => {
 
     return (
-        <div className="absolute  w-full flex flex-row pt-8 max-h-full place-content-stretch items-stretch">
+        <div className="absolute z-10 w-full flex flex-row pt-8 max-h-full place-content-stretch items-stretch">
                 <div className="w-full grid grid-cols-3">
                     <div></div>
                     <div className="place-self-center">

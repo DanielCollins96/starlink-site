@@ -82,7 +82,7 @@ export default function Home() {
         <div className="relative grid text-white w-10/12 m-auto my-8">
           <h2 className="text-2xl text-center md:text-5xl">Preserving the night sky</h2>
           <div className="">
-          <form method="POST" action="https://formspree.io/f/mdopppyn" className="bg-white text-black rounded max-w-md w-2/3 m-auto bg-opacity-30 p-4">
+          <form method="POST" action="https://formspree.io/f/mdopppyn" className="bg-white text-black rounded max-w-md m-auto bg-opacity-30 p-4">
             <div className="">
               <label htmlFor="name">
                 <span className="text-lg text-white">Name (Required)</span>
